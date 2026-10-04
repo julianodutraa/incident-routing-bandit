@@ -1,0 +1,89 @@
+{
+  "llm": {
+    "accuracy": 0.9875,
+    "confusion_matrix": {
+      "db_capacity": {
+        "db_capacity": 15,
+        "dag_orchestration": 1,
+        "k8s_infra": 0,
+        "data_quality": 0,
+        "network_connectivity": 0
+      },
+      "dag_orchestration": {
+        "db_capacity": 0,
+        "dag_orchestration": 16,
+        "k8s_infra": 0,
+        "data_quality": 0,
+        "network_connectivity": 0
+      },
+      "k8s_infra": {
+        "db_capacity": 0,
+        "dag_orchestration": 0,
+        "k8s_infra": 16,
+        "data_quality": 0,
+        "network_connectivity": 0
+      },
+      "data_quality": {
+        "db_capacity": 0,
+        "dag_orchestration": 0,
+        "k8s_infra": 0,
+        "data_quality": 16,
+        "network_connectivity": 0
+      },
+      "network_connectivity": {
+        "db_capacity": 0,
+        "dag_orchestration": 0,
+        "k8s_infra": 0,
+        "data_quality": 0,
+        "network_connectivity": 16
+      }
+    }
+  },
+  "keyword": {
+    "accuracy": 1.0,
+    "confusion_matrix": {
+      "db_capacity": {
+        "db_capacity": 16,
+        "dag_orchestration": 0,
+        "k8s_infra": 0,
+        "data_quality": 0,
+        "network_connectivity": 0
+      },
+      "dag_orchestration": {
+        "db_capacity": 0,
+        "dag_orchestration": 16,
+        "k8s_infra": 0,
+        "data_quality": 0,
+        "network_connectivity": 0
+      },
+      "k8s_infra": {
+        "db_capacity": 0,
+        "dag_orchestration": 0,
+        "k8s_infra": 16,
+        "data_quality": 0,
+        "network_connectivity": 0
+      },
+      "data_quality": {
+        "db_capacity": 0,
+        "dag_orchestration": 0,
+        "k8s_infra": 0,
+        "data_quality": 16,
+        "network_connectivity": 0
+      },
+      "network_connectivity": {
+        "db_capacity": 0,
+        "dag_orchestration": 0,
+        "k8s_infra": 0,
+        "data_quality": 0,
+        "network_connectivity": 16
+      }
+    }
+  },
+  "categories": [
+    "db_capacity",
+    "dag_orchestration",
+    "k8s_infra",
+    "data_quality",
+    "network_connectivity"
+  ]
+}
