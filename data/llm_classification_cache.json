@@ -1,0 +1,573 @@
+{
+  "metadata": {
+    "model": "Claude Sonnet 5 (subagent, general-purpose, zero-shot, no fine-tuning)",
+    "generated_at": "2026-10-04",
+    "task": "zero-shot classification of 80 balanced synthetic incident alerts into 5 cause categories",
+    "prompt_style": "category definitions given; no keyword lists or examples given; the subagent never saw ground-truth labels",
+    "n_incidents": 80,
+    "measured_accuracy": 0.9875,
+    "measured_ece_5_bins": 0.1888
+  },
+  "predictions": [
+    {
+      "incident_id": "EVAL-0043",
+      "title": "Node pool autoscaler failed to add capacity",
+      "description": "Node pool autoscaler failed to add capacity. Autoextend disabled on data file. Readiness probe failing after deploy.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0032",
+      "title": "Container OOMKilled repeatedly",
+      "description": "Container OOMKilled repeatedly. Node pool autoscaler failed to add capacity. TLS handshake timeouts to the upstream endpoint. Pod evicted due to memory pressure.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.8
+    },
+    {
+      "incident_id": "EVAL-0061",
+      "title": "Freshness SLA breached for a gold table",
+      "description": "Freshness SLA breached for a gold table. Row count dropped below the expected watermark. Null rate spike in a required column.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0002",
+      "title": "Backfill run overlapping with the scheduled run",
+      "description": "Backfill run overlapping with the scheduled run. Archive log destination filling up. Connection pool near max_connections limit.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.55
+    },
+    {
+      "incident_id": "EVAL-0033",
+      "title": "Readiness probe failing after deploy",
+      "description": "Readiness probe failing after deploy. Persistent volume claim stuck in pending. Pod stuck in CrashLoopBackOff.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0048",
+      "title": "Schema change detected without a version bump",
+      "description": "Schema change detected without a version bump. Checksum mismatch between source and target. Null rate spike in a required column.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0059",
+      "title": "Connection pool near max_connections limit",
+      "description": "Connection pool near max_connections limit. Null rate spike in a required column. Schema change detected without a version bump.",
+      "predicted_category": "data_quality",
+      "confidence": 0.55
+    },
+    {
+      "incident_id": "EVAL-0029",
+      "title": "Backfill run overlapping with the scheduled run",
+      "description": "Backfill run overlapping with the scheduled run. Tablespace usage above threshold. Retry storm on a downstream task group.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0036",
+      "title": "Persistent volume claim stuck in pending",
+      "description": "Persistent volume claim stuck in pending. Container OOMKilled repeatedly.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0064",
+      "title": "Intermittent DNS resolution failures",
+      "description": "Intermittent DNS resolution failures. Disk free space critically low on the database volume. Connection reset by peer on the egress proxy. Packet loss detected between availability zones.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.75
+    },
+    {
+      "incident_id": "EVAL-0019",
+      "title": "Upstream sensor timed out waiting for partition",
+      "description": "Upstream sensor timed out waiting for partition. Retry storm on a downstream task group. Scheduler heartbeat lagging behind.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0056",
+      "title": "Retry storm on a downstream task group",
+      "description": "Retry storm on a downstream task group. Checksum mismatch between source and target. Row count dropped below the expected watermark.",
+      "predicted_category": "data_quality",
+      "confidence": 0.55
+    },
+    {
+      "incident_id": "EVAL-0005",
+      "title": "Disk free space critically low on the database volume",
+      "description": "Disk free space critically low on the database volume. Connection pool near max_connections limit. Tablespace usage above threshold.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0013",
+      "title": "Autoextend disabled on data file",
+      "description": "Autoextend disabled on data file. Connection pool near max_connections limit. Scheduler heartbeat lagging behind.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.65
+    },
+    {
+      "incident_id": "EVAL-0034",
+      "title": "Pod stuck in CrashLoopBackOff",
+      "description": "Pod stuck in CrashLoopBackOff. Container OOMKilled repeatedly.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0052",
+      "title": "Row count dropped below the expected watermark",
+      "description": "Row count dropped below the expected watermark. Duplicate primary keys found in the landing table. Schema change detected without a version bump.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0042",
+      "title": "Pod stuck in CrashLoopBackOff",
+      "description": "Pod stuck in CrashLoopBackOff. Pod evicted due to memory pressure.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0010",
+      "title": "Disk free space critically low on the database volume",
+      "description": "Disk free space critically low on the database volume. Archive log destination filling up. Storage utilization trending toward capacity ceiling.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0037",
+      "title": "Readiness probe failing after deploy",
+      "description": "Readiness probe failing after deploy. Load balancer returning 503 for a subset of requests. Persistent volume claim stuck in pending.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0030",
+      "title": "Retry storm on a downstream task group",
+      "description": "Retry storm on a downstream task group. DAG run missed its scheduling window. Scheduler heartbeat lagging behind.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0000",
+      "title": "Archive log destination filling up",
+      "description": "Archive log destination filling up. Connection pool near max_connections limit. Storage utilization trending toward capacity ceiling.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0028",
+      "title": "Upstream sensor timed out waiting for partition",
+      "description": "Upstream sensor timed out waiting for partition. Pod evicted due to memory pressure. Scheduler heartbeat lagging behind.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0045",
+      "title": "Pod evicted due to memory pressure",
+      "description": "Pod evicted due to memory pressure. Container OOMKilled repeatedly. Pod stuck in CrashLoopBackOff.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0057",
+      "title": "Checksum mismatch between source and target",
+      "description": "Checksum mismatch between source and target. Duplicate primary keys found in the landing table. Row count dropped below the expected watermark.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0063",
+      "title": "Schema change detected without a version bump",
+      "description": "Schema change detected without a version bump. Null rate spike in a required column. Row count dropped below the expected watermark.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0047",
+      "title": "Pod stuck in CrashLoopBackOff",
+      "description": "Pod stuck in CrashLoopBackOff. Readiness probe failing after deploy.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0055",
+      "title": "Null rate spike in a required column",
+      "description": "Null rate spike in a required column. Freshness SLA breached for a gold table. Row count dropped below the expected watermark.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0039",
+      "title": "Persistent volume claim stuck in pending",
+      "description": "Persistent volume claim stuck in pending. Pod stuck in CrashLoopBackOff. Pod evicted due to memory pressure.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0075",
+      "title": "Load balancer returning 503 for a subset of requests",
+      "description": "Load balancer returning 503 for a subset of requests. Connection reset by peer on the egress proxy.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.85
+    },
+    {
+      "incident_id": "EVAL-0054",
+      "title": "Schema change detected without a version bump",
+      "description": "Schema change detected without a version bump. Upstream sensor timed out waiting for partition. Freshness SLA breached for a gold table.",
+      "predicted_category": "data_quality",
+      "confidence": 0.55
+    },
+    {
+      "incident_id": "EVAL-0078",
+      "title": "VPN tunnel flapping between regions",
+      "description": "VPN tunnel flapping between regions. Connection reset by peer on the egress proxy. TLS handshake timeouts to the upstream endpoint.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0007",
+      "title": "Archive log destination filling up",
+      "description": "Archive log destination filling up. Checksum mismatch between source and target. Tablespace usage above threshold. Storage utilization trending toward capacity ceiling.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0051",
+      "title": "Duplicate primary keys found in the landing table",
+      "description": "Duplicate primary keys found in the landing table. Null rate spike in a required column. Row count dropped below the expected watermark.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0070",
+      "title": "VPN tunnel flapping between regions",
+      "description": "VPN tunnel flapping between regions. Container OOMKilled repeatedly. Intermittent DNS resolution failures.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0008",
+      "title": "Storage utilization trending toward capacity ceiling",
+      "description": "Storage utilization trending toward capacity ceiling. Packet loss detected between availability zones. Tablespace usage above threshold. Disk free space critically low on the database volume.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0011",
+      "title": "Autoextend disabled on data file",
+      "description": "Autoextend disabled on data file. Connection pool near max_connections limit. Disk free space critically low on the database volume.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0021",
+      "title": "Task instance stuck in queued state",
+      "description": "Task instance stuck in queued state. Pod evicted due to memory pressure. Upstream sensor timed out waiting for partition. Scheduler heartbeat lagging behind.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0040",
+      "title": "Container OOMKilled repeatedly",
+      "description": "Container OOMKilled repeatedly. Node pool autoscaler failed to add capacity. Persistent volume claim stuck in pending.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0001",
+      "title": "Schema change detected without a version bump",
+      "description": "Schema change detected without a version bump. Tablespace usage above threshold. Storage utilization trending toward capacity ceiling. Autoextend disabled on data file.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.65
+    },
+    {
+      "incident_id": "EVAL-0020",
+      "title": "Readiness probe failing after deploy",
+      "description": "Readiness probe failing after deploy. Task instance stuck in queued state. Retry storm on a downstream task group.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0077",
+      "title": "Packet loss detected between availability zones",
+      "description": "Packet loss detected between availability zones. Load balancer returning 503 for a subset of requests.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.85
+    },
+    {
+      "incident_id": "EVAL-0068",
+      "title": "Autoextend disabled on data file",
+      "description": "Autoextend disabled on data file. TLS handshake timeouts to the upstream endpoint. Connection reset by peer on the egress proxy.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0071",
+      "title": "Load balancer returning 503 for a subset of requests",
+      "description": "Load balancer returning 503 for a subset of requests. VPN tunnel flapping between regions.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.85
+    },
+    {
+      "incident_id": "EVAL-0049",
+      "title": "Schema change detected without a version bump",
+      "description": "Schema change detected without a version bump. Pod evicted due to memory pressure. Duplicate primary keys found in the landing table. Checksum mismatch between source and target.",
+      "predicted_category": "data_quality",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0044",
+      "title": "Pod evicted due to memory pressure",
+      "description": "Pod evicted due to memory pressure. Storage utilization trending toward capacity ceiling. Persistent volume claim stuck in pending. Readiness probe failing after deploy.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0073",
+      "title": "Intermittent DNS resolution failures",
+      "description": "Intermittent DNS resolution failures. VPN tunnel flapping between regions.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0062",
+      "title": "Schema change detected without a version bump",
+      "description": "Schema change detected without a version bump. Freshness SLA breached for a gold table. Duplicate primary keys found in the landing table.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0069",
+      "title": "VPN tunnel flapping between regions",
+      "description": "VPN tunnel flapping between regions. Load balancer returning 503 for a subset of requests.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0003",
+      "title": "Archive log destination filling up",
+      "description": "Archive log destination filling up. Connection pool near max_connections limit. Disk free space critically low on the database volume. TLS handshake timeouts to the upstream endpoint.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0023",
+      "title": "Scheduler heartbeat lagging behind",
+      "description": "Scheduler heartbeat lagging behind. Backfill run overlapping with the scheduled run.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0014",
+      "title": "Retry storm on a downstream task group",
+      "description": "Retry storm on a downstream task group. Connection pool near max_connections limit. Archive log destination filling up. Storage utilization trending toward capacity ceiling.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.65
+    },
+    {
+      "incident_id": "EVAL-0074",
+      "title": "Packet loss detected between availability zones",
+      "description": "Packet loss detected between availability zones. Intermittent DNS resolution failures.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0067",
+      "title": "Intermittent DNS resolution failures",
+      "description": "Intermittent DNS resolution failures. Packet loss detected between availability zones.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0058",
+      "title": "Checksum mismatch between source and target",
+      "description": "Checksum mismatch between source and target. Schema change detected without a version bump. Duplicate primary keys found in the landing table.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0004",
+      "title": "Connection pool near max_connections limit",
+      "description": "Connection pool near max_connections limit. Archive log destination filling up. Disk free space critically low on the database volume. Upstream sensor timed out waiting for partition.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0053",
+      "title": "Checksum mismatch between source and target",
+      "description": "Checksum mismatch between source and target. Duplicate primary keys found in the landing table. Freshness SLA breached for a gold table.",
+      "predicted_category": "data_quality",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0015",
+      "title": "Storage utilization trending toward capacity ceiling",
+      "description": "Storage utilization trending toward capacity ceiling. Checksum mismatch between source and target. Autoextend disabled on data file. Connection pool near max_connections limit.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0041",
+      "title": "Container OOMKilled repeatedly",
+      "description": "Container OOMKilled repeatedly. Persistent volume claim stuck in pending. Node pool autoscaler failed to add capacity.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0009",
+      "title": "Tablespace usage above threshold",
+      "description": "Tablespace usage above threshold. Disk free space critically low on the database volume. Connection pool near max_connections limit.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0065",
+      "title": "TLS handshake timeouts to the upstream endpoint",
+      "description": "TLS handshake timeouts to the upstream endpoint. Backfill run overlapping with the scheduled run. Connection reset by peer on the egress proxy. Load balancer returning 503 for a subset of requests.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0072",
+      "title": "Packet loss detected between availability zones",
+      "description": "Packet loss detected between availability zones. Load balancer returning 503 for a subset of requests.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.85
+    },
+    {
+      "incident_id": "EVAL-0025",
+      "title": "DAG run missed its scheduling window",
+      "description": "DAG run missed its scheduling window. Duplicate primary keys found in the landing table. Backfill run overlapping with the scheduled run. Retry storm on a downstream task group.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0017",
+      "title": "DAG run missed its scheduling window",
+      "description": "DAG run missed its scheduling window. Backfill run overlapping with the scheduled run.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0079",
+      "title": "Intermittent DNS resolution failures",
+      "description": "Intermittent DNS resolution failures. Persistent volume claim stuck in pending. TLS handshake timeouts to the upstream endpoint. VPN tunnel flapping between regions.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0031",
+      "title": "Task instance stuck in queued state",
+      "description": "Task instance stuck in queued state. Upstream sensor timed out waiting for partition.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0012",
+      "title": "Storage utilization trending toward capacity ceiling",
+      "description": "Storage utilization trending toward capacity ceiling. Disk free space critically low on the database volume. Connection pool near max_connections limit.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0027",
+      "title": "Upstream sensor timed out waiting for partition",
+      "description": "Upstream sensor timed out waiting for partition. DAG run missed its scheduling window.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0026",
+      "title": "Scheduler heartbeat lagging behind",
+      "description": "Scheduler heartbeat lagging behind. Task instance stuck in queued state. Backfill run overlapping with the scheduled run.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0046",
+      "title": "Persistent volume claim stuck in pending",
+      "description": "Persistent volume claim stuck in pending. Node pool autoscaler failed to add capacity. Autoextend disabled on data file. Pod stuck in CrashLoopBackOff.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0076",
+      "title": "Packet loss detected between availability zones",
+      "description": "Packet loss detected between availability zones. Schema change detected without a version bump. Intermittent DNS resolution failures.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0018",
+      "title": "DAG run missed its scheduling window",
+      "description": "DAG run missed its scheduling window. Upstream sensor timed out waiting for partition. Task instance stuck in queued state.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0060",
+      "title": "Freshness SLA breached for a gold table",
+      "description": "Freshness SLA breached for a gold table. Schema change detected without a version bump. Checksum mismatch between source and target. Persistent volume claim stuck in pending.",
+      "predicted_category": "data_quality",
+      "confidence": 0.7
+    },
+    {
+      "incident_id": "EVAL-0016",
+      "title": "DAG run missed its scheduling window",
+      "description": "DAG run missed its scheduling window. Upstream sensor timed out waiting for partition.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0024",
+      "title": "Scheduler heartbeat lagging behind",
+      "description": "Scheduler heartbeat lagging behind. Backfill run overlapping with the scheduled run. Task instance stuck in queued state.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0066",
+      "title": "Load balancer returning 503 for a subset of requests",
+      "description": "Load balancer returning 503 for a subset of requests. Connection reset by peer on the egress proxy.",
+      "predicted_category": "network_connectivity",
+      "confidence": 0.85
+    },
+    {
+      "incident_id": "EVAL-0035",
+      "title": "Node pool autoscaler failed to add capacity",
+      "description": "Node pool autoscaler failed to add capacity. Readiness probe failing after deploy.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0050",
+      "title": "Checksum mismatch between source and target",
+      "description": "Checksum mismatch between source and target. Persistent volume claim stuck in pending. Row count dropped below the expected watermark.",
+      "predicted_category": "data_quality",
+      "confidence": 0.6
+    },
+    {
+      "incident_id": "EVAL-0038",
+      "title": "Container OOMKilled repeatedly",
+      "description": "Container OOMKilled repeatedly. Pod evicted due to memory pressure.",
+      "predicted_category": "k8s_infra",
+      "confidence": 0.9
+    },
+    {
+      "incident_id": "EVAL-0006",
+      "title": "Persistent volume claim stuck in pending",
+      "description": "Persistent volume claim stuck in pending. Connection pool near max_connections limit. Disk free space critically low on the database volume. Autoextend disabled on data file.",
+      "predicted_category": "db_capacity",
+      "confidence": 0.65
+    },
+    {
+      "incident_id": "EVAL-0022",
+      "title": "DAG run missed its scheduling window",
+      "description": "DAG run missed its scheduling window. Task instance stuck in queued state. Scheduler heartbeat lagging behind.",
+      "predicted_category": "dag_orchestration",
+      "confidence": 0.9
+    }
+  ]
+}
