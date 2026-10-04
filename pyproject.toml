@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "incident-routing-bandit"
+version = "0.1.0"
+description = "Contextual multi-armed bandits for on-call incident routing, with an LLM zero-shot classifier evaluated against a deterministic keyword baseline."
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
